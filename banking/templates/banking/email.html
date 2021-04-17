@@ -1,0 +1,11 @@
+{% autoescape on %}
+    Hi {{ user.email }},
+
+    <h2>Your Transcations Details:</h2>
+    <br>
+
+    <h3>transcation_type:</h3>{{transcation_type}}
+    <h3>amount:</h3>{{amount}}
+    <h3>Available Balance:</h3>{{Available_balance}}
+
+{% endautoescape %}

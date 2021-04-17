@@ -1,0 +1,36 @@
+MALE = 'Male'
+FEMALE = 'Female'
+OTHER = 'Other'
+
+GENDER_CHOICES = (
+    (MALE, MALE),
+    (FEMALE, FEMALE),
+    (OTHER, OTHER)
+)
+
+CUSTOMER = 'Customer'
+MANAGER = 'Manager'
+
+USER_TYPES = (
+    (CUSTOMER, CUSTOMER),
+    (MANAGER, MANAGER)
+)
+
+SAVINGS = 'Savings'
+CURRENT = 'Current'
+
+ACCOUNT_TYPES = (
+    (SAVINGS, SAVINGS),
+    (CURRENT, CURRENT)
+)
+
+DEPOSIT = 'Deposit'
+WITHDRAW = 'Withdraw'
+ENQUIRY = 'Enquiry'
+
+TRANSCATION_TYPE = (
+    (DEPOSIT, DEPOSIT),
+    (WITHDRAW, WITHDRAW),
+    (ENQUIRY, ENQUIRY)
+)
+

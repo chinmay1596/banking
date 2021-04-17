@@ -1,0 +1,41 @@
+{% extends 'comman/base.html' %}
+{% load static %}
+
+{% block maincontent %}
+
+
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="card card-signin">
+            <div class="card-body">
+                <form action="" class="form-signin" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+
+                    {% for field in RegistrationForm %}
+                    <p>
+                        {% for error in field.errors %}
+                    <p style="color: red">{{ error }}</p>
+                    {% endfor %}
+                    </p>
+                    {% endfor %}
+                    {% if RegistrationForm.non_field_errors %}
+                    <div style="color: red">
+                        <p>{{RegistrationForm.non_field_errors}}</p>
+                    </div>
+
+                    {% endif %}
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+{% endblock %}

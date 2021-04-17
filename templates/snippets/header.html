@@ -1,0 +1,31 @@
+{% load static %}
+<div class="d-flex p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+
+
+    <div class="d-none d-md-flex flex-row my-auto flex-grow-1 align-items-center">
+        <h5 class="mr-3 font-weight-normal justify-content-start">
+            {% if request.user.user_type == 'Manager' %}
+            <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+            <a class="p-2 text-dark" href="{% url 'export' %}">Export</a>
+            {% else %}
+             <a class="p-2 text-dark" href="{% url 'home' %}">Home</a>
+            {% endif %}
+        </h5>
+        <div class="d-flex flex-row-reverse flex-grow-1">
+            <nav class="">
+                {% if request.user.is_authenticated %}
+                <div class="dropdown dropleft show p-2">
+                    <div class="d-flex flex-row">
+                        <!--account-->
+                        <h6 class="p-2 text-dark">Hi {{request.user.full_name}}</h6>
+                        <a class="p-2 text-dark" href="{% url 'logout' %}">Logout</a>
+                    </div>
+                </div>
+                {% else %}
+                <a class="p-2 text-dark" href="{% url 'login' %}">Login</a>
+                <a class="btn btn-outline-primary" href="{% url 'register' %}">Register</a>
+                {% endif %}
+            </nav>
+        </div>
+    </div>
+</div>
