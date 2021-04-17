@@ -143,5 +143,5 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'antinotest@gmail.com'
 EMAIL_HOST_PASSWORD = 'antino@test123'
-EMAIL_USE_TLS = config('EMAIL_USE_TLS', cast=bool, default=True)
-EMAIL_FROM = config('EMAIL_FROM', default=EMAIL_HOST_USER)
+EMAIL_USE_TLS = True
+EMAIL_FROM = EMAIL_HOST_USER
