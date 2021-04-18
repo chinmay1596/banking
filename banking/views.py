@@ -65,7 +65,7 @@ class TranscationView(SuccessMessageMixin, View):
             context = {
                 'user': self.request.user,
                 'transcation_type': transcation,
-                'amount': data.amount,
+                'amount': new_amount,
                 'Available_balance': data.balance
             }
             email = self.request.user.email
